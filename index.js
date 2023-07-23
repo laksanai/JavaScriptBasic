@@ -1,25 +1,17 @@
-let numberInput = document.getElementById('number-input');
-let runButton = document.getElementById('run-button');
-let output = document.getElementById('uk-card');
-
-function printMutiply() {
-    let number = Number(numberInput.value);
-    let outputHtml = '';
-
-    if (number === 0) {
-        output.innerHTML= "อยากบอกว่าเสียใจ"
-        return;
-    }
-
-
-    for (let i = 1; i <= 12; i++) {
-        outputHtml += '<p>';
-        outputHtml += number+' x '+i+' = ' + (number*i);
-        outputHtml += '</p>';
-    }
-
-    output.innerHTML = outputHtml;
+function saySomething1() {
+    console.log('ไม่ต้องห่วงฉัน 1');
 }
 
-runButton.addEventListener('click', printMutiply);
+let saySomething2 = () => {
+    console.log("ไม่ต้องห่วงฉัน 2");
+}
 
+saySomething1();
+saySomething2();
+
+// For use case
+let sayBbutton = document.getElementById('say-button');
+
+sayBbutton.addEventListener('click', function() {
+    console.log('ไม่ต้องห่วงฉัน 1');
+})
