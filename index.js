@@ -1,7 +1,7 @@
 let scores = [82, 75, 48, 64, 36];
-let passScores = scores.filter((score) => {
-    return score >= 50;
+let sumScores = scores.reduce((sum, score) => {
+    return sum+score;
 });
 
 console.log(scores);
-console.log(passScores);
+console.log(sumScores);
