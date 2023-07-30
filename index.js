@@ -1,18 +1,10 @@
 let scores = [82, 75, 48, 64, 36];
-let passedCount = 0;
-
-// old method
-// for (let i = 0; i < scores.length; i++) {
-//     if (scores[i] >= 50 ) {
-//         passedCount++;
-//     }
-// }
-
-scores.forEach((score) => {
+let passFailScores = scores.map((score) => {
     if (score >= 50) {
-        passedCount++;
-    }
-})
+        return 'passed';
+    };
+    return 'failed';
+});
 
-
-console.log(passedCount);
+console.log(scores);
+console.log(passFailScores);
